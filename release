@@ -1,0 +1,47 @@
+#!/bin/zsh
+project="trashman"
+aurcat="system"
+
+version=$1
+if [[ $version = '' ]]; then
+    echo 'Version number?'
+    echo -n '> '
+    read version
+fi
+
+date=$(date '+%Y-%m-%d')
+datel=$(date '+%Y-%m-%d %H:%M%z')
+
+sed "s/version=.*/version='$version',/" setup.py -i
+sed "s/__version__ = .*/__version__ = '$version'/" trashman -i
+sed "s/pkgver=.*/pkgver=$version/" PKGBUILD -i
+
+rm -rf trashman.egg-info __pycache__ trashman/__pycache__
+
+./setup.py sdist upload
+
+md5out=$(md5sum 'dist/'$project'-'$version'.tar.gz'|awk '{print $1}')
+sed "s/md5sums=.*/md5sums=('$md5out')/" PKGBUILD -i
+rm -rf MKPKGBUILD
+mkdir -p MKPKGBUILD/$project
+cp PKGBUILD MKPKGBUILD/$project
+cd MKPKGBUILD
+tar -czvf trashman.src.tar.gz trashman
+burp -u Kwpolska -c system trashman.src.tar.gz
+cd ..
+rm -rf MKPKGBUILD
+
+echo 'Commit message (sans the version?)'
+echo -n '> '
+read commitmsg
+
+rm -rf trashman.egg-info __pycache__ trashman/__pycache__
+
+git add *
+if [[ $2 = '-c' ]]; then
+    git commit -as
+else
+    git commit -asm "v$version: $commitmsg"
+fi
+git tag -a "v$version" -m "Version $version"
+git push --tags
