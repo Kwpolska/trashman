@@ -7,7 +7,7 @@ except ImportError:
 #from distutils.core import setup
 
 setup(name='trashman',
-      version='0.1',
+      version='0.1.1',
       description='A python XDG trash manager.',
       author='Kwpolska',
       author_email='kwpolska@kwpolska.tk',
@@ -25,4 +25,4 @@ setup(name='trashman',
                    'Programming Language :: Python :: 2',
                    'Programming Language :: Python :: 3',
                    'Topic :: Utilities'],
-      scripts=['trashman'])
+      scripts=['trash'])

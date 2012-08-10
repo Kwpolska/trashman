@@ -13,8 +13,11 @@ date=$(date '+%Y-%m-%d')
 datel=$(date '+%Y-%m-%d %H:%M%z')
 
 sed "s/version=.*/version='$version',/" setup.py -i
-sed "s/__version__ = .*/__version__ = '$version'/" trashman -i
+sed "s/__version__ = .*/__version__ = '$version'/" trash -i
+sed "s/:Version: .*/:Version: $version/" ./*.rst -i
 sed "s/pkgver=.*/pkgver=$version/" PKGBUILD -i
+
+cp README.rst README
 
 rm -rf trashman.egg-info __pycache__ trashman/__pycache__
 
