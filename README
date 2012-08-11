@@ -5,7 +5,7 @@ Trashman.  Removing files from console v2.0.
 :Info: This is the README file for Trashman.
 :Author: Kwpolska <kwpolska@kwpolska.tk>
 :Date: 2012-08-10
-:Version: 0.1.1
+:Version: 0.1.2
 
 PURPOSE
 -------

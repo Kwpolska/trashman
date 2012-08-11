@@ -52,7 +52,7 @@ else:
     trash = os.getenv('XDG_DATA_HOME') + '/Trash'
 
 __title__ = 'Trashman'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __author__ = 'Kwpolska'
 __license__ = '3-clause BSD'
 
@@ -152,7 +152,7 @@ def restore_from_trash(filename, verbose):
         regenerate_trash()
         if verbose:
             sys.stderr.write('restored {0} to {1} (trashed {2})'.format(
-                filename, info['Path'], info['DeletionDate'])
+                filename, info['Path'], info['DeletionDate']))
     else:
         raise Exception('no such file in trash')
 
@@ -160,6 +160,7 @@ def restore_from_trash(filename, verbose):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Trashman – a Python XDG \
                                      trash manager.")
+
     parser.add_argument('-V', '--version', action='version',
                         version='Trashman v' + __version__)
     parser.add_argument('-v', '--verbose', action='store_true', default=False,
@@ -168,6 +169,8 @@ if __name__ == '__main__':
                         dest='empty', help="empty the trash and quit")
     parser.add_argument('-l', '--list', action='store_true', default=False,
                         dest='flist', help="list the files in trash and quit")
+    parser.add_argument('-r', '--restore', action='store_true', default=False,
+                        dest='restore', help="restore FILE(s) from trash")
     parser.add_argument('-w', '--trash-location', action='store_true',
                         default=False, dest='showloc', help="print the \
                         trash location and quit")
