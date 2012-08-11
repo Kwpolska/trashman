@@ -1,6 +1,6 @@
 # Maintainer: Kwpolska <kwpolska@kwpolska.tk>
 pkgname=trashman
-pkgver=0.1.2
+pkgver=0.1.3
 pkgrel=1
 pkgdesc='A Python XDG trash manager. (built under py3k)'
 arch=('any')
@@ -9,7 +9,7 @@ license=('BSD')
 depends=('python')
 options=(!emptydirs)
 source=("http://pypi.python.org/packages/source/t/${pkgname}/${pkgname}-${pkgver}.tar.gz")
-md5sums=('e1502dff82eb6bbf6f31b29e9a2907b7')
+md5sums=('5598d9c8bf2632d4af2ac9da65fcc75b')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"

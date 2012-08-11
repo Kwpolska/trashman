@@ -52,7 +52,7 @@ else:
     trash = os.getenv('XDG_DATA_HOME') + '/Trash'
 
 __title__ = 'Trashman'
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 __author__ = 'Kwpolska'
 __license__ = '3-clause BSD'
 
