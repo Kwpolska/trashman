@@ -1,6 +1,6 @@
-============================================
-Trashman.  Removing files from console v2.0.
-============================================
+======================================
+Trashman.  A Python XDG trash manager.
+======================================
 
 :Info: This is the README file for Trashman.
 :Author: Kwpolska <kwpolska@kwpolska.tk>
