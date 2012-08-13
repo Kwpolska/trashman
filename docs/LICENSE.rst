@@ -4,7 +4,7 @@ Appendix A. License for Trashman
 :Info: This is an appendix to the Trashman documentation.
 :Author: Kwpolska <kwpolska@kwpolska.tk>
 :Date: 2012-08-13
-:Version: 0.2.1
+:Version: 0.2.2
 
 .. index:: LICENSE
 
