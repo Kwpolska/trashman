@@ -97,7 +97,7 @@ echo 'Commit message (sans the version?)'
 echo -n '> '
 read commitmsg
 
-rm -rf trashman.egg-info __pycache__ trashman/__pycache__ *.pyc
+rm -rf trashman.egg-info __pycache__ trashman/__pycache__ trashman.pyc
 
 git add *
 if [[ $2 = '-c' ]]; then
