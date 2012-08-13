@@ -1,0 +1,68 @@
+# Trashman pot file.
+# Copyright (C) 2011-2012, Kwpolska.
+# This file is distributed under the same license as the Trashman package.
+# Kwpolska <kwpolska@kwpolska.tk>, 2011-2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.2.1\n"
+"Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
+"POT-Creation-Date: 2012-08-13 20:51+0200\n"
+"PO-Revision-Date: 2012-08-13 20:51+0200\n"
+"Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
+"Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: trashman.py:116
+msgid "emptied the trash\n"
+msgstr ""
+
+#: trashman.py:156
+msgid "trashed ‘{0}’\n"
+msgstr ""
+
+#: trashman.py:168
+msgid "restored {0} to {1} (trashed {2})\n"
+msgstr ""
+
+#: trashman.py:176
+msgid ""
+"Trashman – a Python                                      XDG trash manager."
+msgstr ""
+
+#: trashman.py:182
+msgid "explain what is being done"
+msgstr ""
+
+#: trashman.py:184
+msgid "empty the trash and quit"
+msgstr ""
+
+#: trashman.py:186
+msgid ""
+"list the files in trash and                                               "
+"quit"
+msgstr ""
+
+#: trashman.py:189
+msgid "restore FILE(s) from trash"
+msgstr ""
+
+#: trashman.py:191
+msgid "print the                         trash location and quit"
+msgstr ""
+
+#: trashman.py:193
+msgid "FILE"
+msgstr ""
+
+#: trashman.py:194
+msgid "files to remove"
+msgstr ""
+
+#: trashman.py:201
+msgid "“{0}” does not exist, creating..."
+msgstr ""
