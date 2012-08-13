@@ -1,7 +1,7 @@
 Trashman.  A Python XDG trash manager.
 ======================================
 
-.. note:: This documentation is for Trashman version |release|.  It may change at any given moment.
+.. note:: This documentation is for Trashman version |release|.  Some parts of this documentation might not apply to other versions.
 
 Trashman is a trash manager, conforming to XDG standards.  It is a work-in-progress, though, and it may break.
 
