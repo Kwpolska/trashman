@@ -39,6 +39,7 @@ Additional documents, indices and tables
 .. toctree::
    :maxdepth: 2
 
+   trashman
    functions
    README for Trashman <README>
    LICENSE
