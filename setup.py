@@ -4,10 +4,9 @@ try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
-#from distutils.core import setup
 
 setup(name='trashman',
-      version='0.2.0',
+      version='0.2.1',
       description='A Python XDG trash manager.',
       author='Kwpolska',
       author_email='kwpolska@kwpolska.tk',
@@ -25,4 +24,6 @@ setup(name='trashman',
                    'Programming Language :: Python :: 2',
                    'Programming Language :: Python :: 3',
                    'Topic :: Utilities'],
-      scripts=['bin/trash'])
+      py_modules = ['trashman'],
+      scripts=['bin/trash'],
+      data_files=[('share/man/man8', ['docs/pkgbuilder.8.gz'])])

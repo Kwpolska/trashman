@@ -17,10 +17,8 @@ TODO for Trashman:
           (created a directory called ~/Desktop/TRASHTEST, added a file,
               trashed the directory, tried to restore the file inside)
 
-  * manpage
-    requires: .rst, ./release modifications (stel from pkgbuilder)
-
   * [proposition] file management UI
     requires: magic, qt/ncurses (ranger is in python, this might be of use)
+    NOTE: don’t forget that ncurses = pure evil!
 
 -- Kwpolska 2012-08-10T18:53:00Z

@@ -4,7 +4,7 @@ Functions List
 :Author: Kwpolska
 :Copyright: See Appendix A.
 :Date: 2012-08-13
-:Version: 0.2.0
+:Version: 0.2.1
 
 .. index:: functions
 

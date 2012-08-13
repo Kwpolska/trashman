@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman v0.2.0
+# Trashman v0.2.1
+# A Python XDG trash manager.
 # Copyright (C) 2011-2012, Kwpolska.
 # All rights reserved.
 #
@@ -34,7 +35,11 @@
 """
     trashman
     ~~~~~~~~
-    A Python XDG Trash manager.
+
+    A Python XDG trash manager.
+
+    :Copyright: (C) 2011-2012, Kwpolska.
+    :License: BSD (see /LICENSE).
 """
 
 import shutil
@@ -44,6 +49,7 @@ import subprocess
 import datetime
 import sys
 import argparse
+import gettext
 
 try:
     import configparser
@@ -55,8 +61,11 @@ if os.getenv('XDG_DATA_HOME') is None:
 else:
     trash = os.getenv('XDG_DATA_HOME') + '/Trash'
 
+T = gettext.translation('trashman', '/usr/share/locale', fallback='C')
+_ = T.gettext
+
 __title__ = 'Trashman'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 __author__ = 'Kwpolska'
 __license__ = '3-clause BSD'
 
@@ -104,7 +113,7 @@ def empty_trash(verbose):
     shutil.rmtree(trash + '/info')
     regenerate_trash()
     if verbose:
-        sys.stderr.write("emptied the trash\n")
+        sys.stderr.write(_("emptied the trash\n"))
 
 
 def list_files():
@@ -144,7 +153,7 @@ DeletionDate={1}
     regenerate_trash()
 
     if verbose:
-        sys.stderr.write("trashed ‘{0}’\n".format(filename))
+        sys.stderr.write(_("trashed ‘{0}’\n").format(filename))
 
 
 def restore_from_trash(filename, verbose):
@@ -156,40 +165,41 @@ def restore_from_trash(filename, verbose):
         os.remove(trash + '/info/' + filename + '.trashinfo')
         regenerate_trash()
         if verbose:
-            sys.stderr.write('restored {0} to {1} (trashed {2})\n'.format(
-                filename, info['Path'], info['DeletionDate']))
+            sys.stderr.write(_('restored {0} to {1} (trashed {2})\n'.format(
+                filename, info['Path'], info['DeletionDate'])))
     else:
         raise Exception('no such file in trash')
 
 
 def main():
     """The main routine."""
-    parser = argparse.ArgumentParser(description="Trashman – a Python XDG \
-                                     trash manager.")
+    parser = argparse.ArgumentParser(description=_("Trashman – a Python \
+                                     XDG trash manager."))
 
     parser.add_argument('-V', '--version', action='version',
                         version='Trashman v' + __version__)
     parser.add_argument('-v', '--verbose', action='store_true', default=False,
-                        dest='verbose', help="explain what is being done")
+                        dest='verbose', help=_("explain what is being done"))
     parser.add_argument('-e', '--empty', action='store_true', default=False,
-                        dest='empty', help="empty the trash and quit")
+                        dest='empty', help=_("empty the trash and quit"))
     parser.add_argument('-l', '--list', action='store_true', default=False,
-                        dest='flist', help="list the files in trash and quit")
+                        dest='flist', help=_("list the files in trash and \
+                                              quit"))
     parser.add_argument('-r', '--restore', action='store_true', default=False,
-                        dest='restore', help="restore FILE(s) from trash")
+                        dest='restore', help=_("restore FILE(s) from trash"))
     parser.add_argument('-w', '--trash-location', action='store_true',
-                        default=False, dest='showloc', help="print the \
-                        trash location and quit")
-    parser.add_argument('files', metavar="FILE", action='store', nargs='*',
-                        help="files to remove")
+                        default=False, dest='showloc', help=_("print the \
+                        trash location and quit"))
+    parser.add_argument('files', metavar=_("FILE"), action='store', nargs='*',
+                        help=_("files to remove"))
     args = parser.parse_args()
 
     quit_notrash = False
 
     if not os.path.exists(trash):
         if args.verbose:
-            sys.stderr.write("“{0}” does not exist, creating...".format(
-                trash))
+            sys.stderr.write(_("“{0}” does not exist, \
+creating...").format(trash))
 
         regenerate_trash()
 

@@ -5,7 +5,7 @@ Trashman
 :Author: Kwpolska <kwpolska@kwpolska.tk>
 :Copyright: See Appendix A.
 :Date: 2012-08-13
-:Version: 0.2.0
+:Version: 0.2.1
 :Manual section: 1
 :Manual group: Trashman manual
 
