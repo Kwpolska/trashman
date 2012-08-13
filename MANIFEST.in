@@ -3,3 +3,5 @@ include README.rst
 include README
 include TODO.rst
 include AUTHORS
+recursive-include docs *
+recursive-include bin *

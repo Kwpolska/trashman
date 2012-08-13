@@ -4,20 +4,20 @@ Trashman.  A Python XDG trash manager.
 
 :Info: This is the README file for Trashman.
 :Author: Kwpolska <kwpolska@kwpolska.tk>
-:Date: 2012-08-10
-:Version: 0.1.4
+:Date: 2012-08-13
+:Version: 0.2.0
 
 PURPOSE
 -------
-This is a simple trash manager.  It can move files to the trash, empty
-it and list its contents.
+This is a simple trash manager.  It can do various things related to
+the trash.
 
 Based on this specification:
     <http://freedesktop.org/wiki/Specifications/trash-spec>.
 
 INSTALLATION
 ------------
-Run ./setup.py.
+PyPI or AUR.
 
 COPYRIGHT
 ---------

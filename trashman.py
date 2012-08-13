@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman
+# Trashman v0.2.0
 # Copyright (C) 2011-2012, Kwpolska.
 # All rights reserved.
 #
@@ -31,7 +31,11 @@
 # THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-"""Trashman — a Python XDG Trash manager."""
+"""
+    trashman
+    ~~~~~~~~
+    A Python XDG Trash manager.
+"""
 
 import shutil
 import os
@@ -52,7 +56,7 @@ else:
     trash = os.getenv('XDG_DATA_HOME') + '/Trash'
 
 __title__ = 'Trashman'
-__version__ = '0.1.4'
+__version__ = '0.2.0'
 __author__ = 'Kwpolska'
 __license__ = '3-clause BSD'
 
@@ -142,6 +146,7 @@ DeletionDate={1}
     if verbose:
         sys.stderr.write("trashed ‘{0}’\n".format(filename))
 
+
 def restore_from_trash(filename, verbose):
     """Restores a file from trash."""
     infofile = configparser.ConfigParser()
@@ -157,7 +162,8 @@ def restore_from_trash(filename, verbose):
         raise Exception('no such file in trash')
 
 
-if __name__ == '__main__':
+def main():
+    """The main routine."""
     parser = argparse.ArgumentParser(description="Trashman – a Python XDG \
                                      trash manager.")
 
@@ -196,7 +202,7 @@ if __name__ == '__main__':
         quit_notrash = True
 
     if args.showloc:
-        sys.stderr.write('Trash is in:\n    {0}\n'.format(trash))
+        sys.stderr.write(trash + '\n')
         quit_notrash = True
 
     if args.restore:

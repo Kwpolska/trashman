@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+"""Run Trashman."""
+import trashman
+try:
+    trashman.main()
+except KeyboardInterrupt:
+    print('Interrupt signal received, quitting.')
+    exit(0)

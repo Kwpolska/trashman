@@ -13,14 +13,30 @@ date=$(date '+%Y-%m-%d')
 datel=$(date '+%Y-%m-%d %H:%M%z')
 
 sed "s/version=.*/version='$version',/" setup.py -i
-sed "s/__version__ = .*/__version__ = '$version'/" trash -i
-sed "s/:Version: .*/:Version: $version/" ./*.rst -i
+sed "s/version = .*/version = '$version'/g" docs/conf.py -i
+sed "s/release = .*/release = '$version'/g" docs/conf.py -i
+sed "s/:Version: .*/:Version: $version/g" docs/*.rst -i
+sed "s/BUILDer .* do/BUILDer $version do/g" docs/index.rst -i
+sed "s/# Trashman v.*/# Trashman v$version/g" trashman.py -i
+sed "s/__version__ = .*/__version__ = '$version'/" trashman.py -i
 sed "s/pkgver=.*/pkgver=$version/" PKGBUILD -i
 
-cp README.rst README
+sed "s/:Date: .*/:Date: $date/g" docs/*.rst -i
 
-rm -rf trashman.egg-info __pycache__ trashman/__pycache__
+cp docs/README.rst README.rst
+cp docs/README.rst README
 
+rm docs/trashman.8.gz | true
+rst2man docs/trashman.rst > docs/trashman.8
+gzip docs/trashman.8
+
+python -c 'import trashman'
+if [[ $? = 1 ]]; then
+    echo "Import failed.  Fix your code or don't come back."
+    exit 1
+fi
+
+rm -rf trashman.egg-info __pycache__ trashman/__pycache__ trashman.pyc
 ./setup.py sdist upload
 
 md5out=$(md5sum 'dist/'$project'-'$version'.tar.gz'|awk '{print $1}')
@@ -38,7 +54,7 @@ echo 'Commit message (sans the version?)'
 echo -n '> '
 read commitmsg
 
-rm -rf trashman.egg-info __pycache__ trashman/__pycache__
+rm -rf trashman.egg-info __pycache__ trashman/__pycache__ *.pyc
 
 git add *
 if [[ $2 = '-c' ]]; then
@@ -48,3 +64,4 @@ else
 fi
 git tag -a "v$version" -m "Version $version"
 git push --tags
+git push

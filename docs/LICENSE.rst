@@ -1,26 +1,13 @@
-======================================
-Trashman.  A Python XDG trash manager.
-======================================
-
-:Info: This is the README file for Trashman.
+================================
+Appendix A. License for Trashman
+================================
+:Info: This is an appendix to the Trashman documentation.
 :Author: Kwpolska <kwpolska@kwpolska.tk>
 :Date: 2012-08-13
 :Version: 0.2.0
 
-PURPOSE
--------
-This is a simple trash manager.  It can do various things related to
-the trash.
+.. index:: LICENSE
 
-Based on this specification:
-    <http://freedesktop.org/wiki/Specifications/trash-spec>.
-
-INSTALLATION
-------------
-PyPI or AUR.
-
-COPYRIGHT
----------
 Copyright (C) 2011-2012, Kwpolska.
 All rights reserved.
 
