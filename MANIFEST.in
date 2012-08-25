@@ -6,3 +6,4 @@ include AUTHORS
 recursive-include docs *
 recursive-include bin *
 recursive-include locale *
+recursive-include shell-completions *

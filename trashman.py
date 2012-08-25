@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman v0.2.3
+# Trashman v0.2.4
 # A Python XDG trash manager.
 # Copyright (C) 2011-2012, Kwpolska.
 # All rights reserved.
@@ -65,7 +65,7 @@ T = gettext.translation('trashman', '/usr/share/locale', fallback='C')
 _ = T.gettext
 
 __title__ = 'Trashman'
-__version__ = '0.2.3'
+__version__ = '0.2.4'
 __author__ = 'Kwpolska'
 __license__ = '3-clause BSD'
 
@@ -118,7 +118,7 @@ def empty_trash(verbose):
 
 def list_files():
     """List the trash contents (using /bin/ls)."""
-    subprocess.call('/bin/ls -CF --color=auto ' + trash + '/files',
+    subprocess.call('/bin/ls -CFG --color=auto ' + trash + '/files',
                     shell=True)
 
 
@@ -176,25 +176,29 @@ def main():
     parser = argparse.ArgumentParser(description=_("Trashman – a Python \
                                      XDG trash manager."))
 
+
+    argopt = parser.add_argument_group(_('options'))
+    argopr = parser.add_argument_group(_('operations'))
+
     parser.add_argument('-V', '--version', action='version',
                         version='Trashman v' + __version__)
-    parser.add_argument('-v', '--verbose', action='store_true', default=False,
-                        dest='verbose', help=_("explain what is being done"))
-    parser.add_argument('-e', '--empty', action='store_true', default=False,
-                        dest='empty', help=_("empty the trash and quit"))
-    parser.add_argument('-l', '--list', action='store_true', default=False,
+    argopr.add_argument('-e', '--empty', action='store_true', default=False,
+                        dest='empty', help=_("empty the trash and exit"))
+    argopr.add_argument('-l', '--list', action='store_true', default=False,
                         dest='flist', help=_("list the files in trash and \
-                                              quit"))
-    parser.add_argument('-r', '--restore', action='store_true', default=False,
+                                              exit"))
+    argopr.add_argument('-r', '--restore', action='store_true', default=False,
                         dest='restore', help=_("restore FILE(s) from trash"))
-    parser.add_argument('-w', '--trash-location', action='store_true',
+    argopt.add_argument('-v', '--verbose', action='store_true', default=False,
+                        dest='verbose', help=_("explain what is being done"))
+    argopr.add_argument('-w', '--trash-location', action='store_true',
                         default=False, dest='showloc', help=_("print the \
-                        trash location and quit"))
+                        trash location and exit"))
     parser.add_argument('files', metavar=_("FILE"), action='store', nargs='*',
-                        help=_("files to remove"))
+                        help=_("files to trash"))
     args = parser.parse_args()
 
-    quit_notrash = False
+    exit_notrash = False
 
     if not os.path.exists(trash):
         if args.verbose:
@@ -205,24 +209,24 @@ creating...").format(trash))
 
     if args.flist:
         list_files()
-        quit_notrash = True
+        exit_notrash = True
 
     if args.empty:
         empty_trash(args.verbose)
-        quit_notrash = True
+        exit_notrash = True
 
     if args.showloc:
-        sys.stderr.write(trash + '\n')
-        quit_notrash = True
+        print(trash)
+        exit_notrash = True
 
     if args.restore:
         for fileres in args.files:
             restore_from_trash(fileres, args.verbose)
-        quit_notrash = True
+        exit_notrash = True
 
-    if quit_notrash:
+    if exit_notrash:
         exit()
     else:
-        # Did not quit?  We can trash.
+        # Did not exit?  We can trash.
         for filedel in args.files:
             move_to_trash(filedel, args.verbose)

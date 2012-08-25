@@ -3,8 +3,8 @@ Functions List
 ==============
 :Author: Kwpolska
 :Copyright: See Appendix A.
-:Date: 2012-08-13
-:Version: 0.2.3
+:Date: 2012-08-25
+:Version: 0.2.4
 
 .. index:: functions
 

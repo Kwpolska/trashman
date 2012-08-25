@@ -4,8 +4,8 @@ Trashman.  A Python XDG trash manager.
 
 :Info: This is the README file for Trashman.
 :Author: Kwpolska <kwpolska@kwpolska.tk>
-:Date: 2012-08-13
-:Version: 0.2.3
+:Date: 2012-08-25
+:Version: 0.2.4
 
 PURPOSE
 -------
