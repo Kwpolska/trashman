@@ -15,7 +15,7 @@
     :License: BSD (see /LICENSE).
 """
 
-from .. import _, TMError, size_dir
+from .. import DS, _, TMError, size_dir
 from .trash import Trash
 import shutil
 import os
@@ -38,6 +38,14 @@ class XDGTrash(Trash):
         trashdir = os.path.expanduser('~/.local/share/Trash')
     else:
         trashdir = os.getenv('XDG_DATA_HOME') + '/Trash'
+
+    try:
+        if not os.path.exists(trashdir):
+            os.mkdir(trashdir)
+    except OSError:
+        DS.error('Couldn’t access the proper directory, temporary trash \
+is in in /tmp/TRASH')
+        trashdir = os.path.join('tmp' 'TRASH')
 
     filedir = trashdir + '/files/'
     infodir = trashdir + '/info/'
