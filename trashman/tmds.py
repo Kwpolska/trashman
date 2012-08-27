@@ -44,7 +44,10 @@ class TMDS(object):
     if not config.has_section('default_backend'):
         config.add_section('default_backend')
         config.set('default_backend', 'name', 'auto')
-        config.write(open(os.path.join(confdir, 'trashman.cfg'), 'w'))
+        try:
+            config.write(open(os.path.join(confdir, 'trashman.cfg'), 'w'))
+        except IOError:
+            pass
 
     if not os.path.exists(confdir):
         try:
