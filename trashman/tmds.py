@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- encoding: utf-8 -*-
-# Trashman v1.0.0
+# Trashman v1.0.1
 # A Python trash manager.
 # Copyright (C) 2011-2012, Kwpolska.
 # See /LICENSE for licensing information.
@@ -44,7 +44,7 @@ class TMDS(object):
     if not config.has_section('default_backend'):
         config.add_section('default_backend')
         config.set('default_backend', 'name', 'auto')
-        config.write(open(os.path.join(confhome, 'trashman.cfg'), 'w'))
+        config.write(open(os.path.join(confdir, 'trashman.cfg'), 'w'))
 
     if not os.path.exists(confdir):
         try:

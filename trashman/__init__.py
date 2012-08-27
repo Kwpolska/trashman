@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman v1.0.0
+# Trashman v1.0.1
 # A Python trash manager.
 # Copyright (C) 2011-2012, Kwpolska.
 # All rights reserved.
@@ -44,7 +44,7 @@
 """
 
 __title__ = 'Trashman'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __author__ = 'Kwpolska'
 __license__ = '3-clause BSD'
 __docformat__ = 'restructuredtext en'

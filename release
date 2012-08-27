@@ -122,6 +122,7 @@ if [[ $? != '1' ]]; then
         echo 'But please test your changes using that other terminal.'
         read dn2
         git add *
+    fi
 fi
 
 if [[ $cm = 't' ]]; then
