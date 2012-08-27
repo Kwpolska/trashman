@@ -6,14 +6,14 @@ except ImportError:
     from distutils.core import setup
 
 setup(name='trashman',
-      version='0.2.4',
-      description='A Python XDG trash manager.',
+      version='1.0.0',
+      description='A Python trash manager.',
       author='Kwpolska',
       author_email='kwpolska@kwpolska.tk',
       url='https://github.com/Kwpolska/trashman',
       license='3-clause BSD',
       long_description=open('README.rst').read(),
-      platforms='Arch Linux',
+      platforms='any',
       classifiers=['Development Status :: 5 - Production/Stable',
                    'Environment :: Console',
                    'Intended Audience :: End Users/Desktop',
@@ -24,11 +24,11 @@ setup(name='trashman',
                    'Programming Language :: Python :: 2',
                    'Programming Language :: Python :: 3',
                    'Topic :: Utilities'],
-      py_modules=['trashman'],
+      packages=['trashman', 'trashman.backends'],
       scripts=['bin/trash'],
       data_files=[('share/man/man8', ['docs/trashman.8.gz']),
                   ('share/locale/en/LC_MESSAGES', ['locale/en/LC_MESSAGES/\
-pkgbuilder.mo']),
+trashman.mo']),
                   ('share/locale/pl/LC_MESSAGES', ['locale/pl/LC_MESSAGES/\
-pkgbuilder.mo']),
+trashman.mo']),
                   ('share/zsh/site-functions', ['shell-completions/_trash'])])

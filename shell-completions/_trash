@@ -5,10 +5,12 @@ args=(
   '(-h --help)'{-h,--help}'[show this help message and exit]'
   '(-V --version)'{-V,--version}'[show program'"'"'s version number and exit]'
   '(-v --verbose)'{-v,--verbose}'[explain what is being done]'
+  '(-b --backend)'{-b,--backend}'[select the backend (default: config->auto->xdg)]:backend:->backend'
   '(-e --empty)'{-e,--empty}'[empty the trash and exit]'
   '(-l --list)'{-l,--list}'[list the files in trash and exit]'
   '(-r --restore)'{-r+,--restore+}'[restore FILE(s) from trash]:file in trash:->sr'
   '(-w --trash-location)'{-w,--trash-location}'[print the trash location and exit]'
+  '(-W --files-location)'{-W,--files-location}'[print the trashed files location and exit]'
   '*::files:->file'
 )
 
@@ -19,7 +21,7 @@ _arguments -C $args && ret=0
 case $state in
   (file)
     if [[ fs = 0 ]]; then
-      cd $(trash -w)/files
+      cd $(trash -W)
     fi
     declare -a ignored
     ignored=()
@@ -30,7 +32,7 @@ case $state in
     _files -F ignored && ret=0
     ;;
   (sr)
-    cd $(trash -w)/files
+    cd $(trash -W)
     declare -a ignored
     ignored=()
     ((CURRENT > 1)) &&
@@ -38,6 +40,12 @@ case $state in
     ((CURRENT < $#line)) &&
       ignored+=(${line[CURRENT+1,-1]//(#m)[\[\]()\\*?#<>~\^]/\\$MATCH})
     _files -F ignored && ret=0
+    ;;
+  (backend)
+    declare -a backends
+    backends=('auto' 'config' 'list' 'dummy' 'xdg')
+    _describe -t 'backends' 'backend' backends && ret=0
+    ;;
 esac
 
 return $ret

@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.2.4\n"
+"Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
-"POT-Creation-Date: 2012-08-25 15:56+0200\n"
+"POT-Creation-Date: 2012-08-27 18:46+0200\n"
 "PO-Revision-Date: 2012-08-13 20:48+0200\n"
 "Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
@@ -16,61 +16,115 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: trashman.py:116
-msgid "emptied the trash\n"
-msgstr "opróżniono śmietnik\n"
-
-#: trashman.py:156
-msgid "trashed ‘{0}’\n"
-msgstr "wyrzucony „{0}”\n"
-
-#: trashman.py:168
-msgid "restored {0} to {1} (trashed {2})\n"
-msgstr "przywrócony {0} do {1} (wyrzucony {2})\n"
-
-#: trashman.py:176
+#: trashman/main.py:26
 msgid ""
-"Trashman – a Python                                      XDG trash manager."
-msgstr "Trashman — menedżer śmietnika XDG w Pythonie."
+"Trashman -- a Python                                      trash manager."
+msgstr "Trashman — menedżer śmietnika w Pythonie."
 
-#: trashman.py:180
+#: trashman/main.py:29
 msgid "options"
 msgstr "opcje"
 
-#: trashman.py:181
+#: trashman/main.py:30
 msgid "operations"
 msgstr "operacje"
 
-#: trashman.py:186
+#: trashman/main.py:36
+msgid "explain what is being done"
+msgstr "wyjaśnianie co się dzieje"
+
+#: trashman/main.py:38
+msgid "select the backend (default:                         config->auto->xdg)"
+msgstr "wybierz backend (domyślnie: config->auto->xdg)"
+
+#: trashman/main.py:42
 msgid "empty the trash and exit"
 msgstr "opróźnij śmietnik i wyjdź"
 
-#: trashman.py:188
+#: trashman/main.py:44
 msgid ""
 "list the files in trash and                                               "
 "exit"
 msgstr "wylistuj pliki w śmietniku i wyjdź"
 
-#: trashman.py:191
+#: trashman/main.py:47
 msgid "restore FILE(s) from trash"
 msgstr "przywróć PLIK(i) ze śmietnika"
 
-#: trashman.py:193
-msgid "explain what is being done"
-msgstr "wyjaśnianie co się dzieje"
-
-#: trashman.py:195
+#: trashman/main.py:49
 msgid "print the                         trash location and exit"
 msgstr "wypisz lokalizację śmietnika i wyjdź"
 
-#: trashman.py:197
+#: trashman/main.py:52
+msgid "print the                         trashed files location and exit"
+msgstr "wypisz lokalizację plików w śmietniku i wyjdź"
+
+#: trashman/main.py:54
 msgid "FILE"
 msgstr "PLIK"
 
-#: trashman.py:198
+#: trashman/main.py:55
 msgid "files to trash"
 msgstr "pliki do wyrzucenia"
 
-#: trashman.py:205
-msgid "“{0}” does not exist, creating..."
-msgstr "„{0}” nie istnieje, tworzenie..."
+#. internal: [log/human, module, class, 'description as in docs']
+#: trashman/backends/__init__.py:26
+msgid "[choose automatically]"
+msgstr "[wybierz automatycznie]"
+
+#: trashman/backends/__init__.py:27
+msgid "[consult trashman.cfg]"
+msgstr "[zgodnie z trashman.cfg]"
+
+#: trashman/backends/__init__.py:28
+msgid "[list backends]"
+msgstr "[wypisz backendy]"
+
+#: trashman/backends/__init__.py:29
+msgid "A dummy backend, printing all the requests it gets."
+msgstr "Sztuczny backend, wypisujący wszystkie żądania, jakie otrzyma."
+
+#: trashman/backends/__init__.py:31
+msgid "An XDG trash implementation."
+msgstr "Implementacja śmietnika XDG."
+
+#: trashman/backends/__init__.py:35
+msgid "*** backend from config: {}"
+msgstr "*** backend z konfiguracji: {}"
+
+#: trashman/backends/__init__.py:55
+msgid "NAME"
+msgstr "NAZWA"
+
+#: trashman/backends/__init__.py:56
+msgid "DESCRIPTION"
+msgstr "OPIS"
+
+#: trashman/backends/__init__.py:85
+msgid "No such backend: {}"
+msgstr "Nie ma takiego backendu: {}"
+
+#: trashman/backends/__init__.py:93
+msgid "*** using the {} backend"
+msgstr "*** używając backendu {}"
+
+#: trashman/backends/trash.py:42 trashman/backends/trash.py:47
+#: trashman/backends/trash.py:52 trashman/backends/trash.py:57
+msgid "Backend didn’t implement this functionality"
+msgstr "Backend nie zaimplementował tej funkcjonalności"
+
+#: trashman/backends/xdgtrash.py:77
+msgid "emptied the trash\n"
+msgstr "opróżniono śmietnik\n"
+
+#: trashman/backends/xdgtrash.py:132
+msgid "trashed '{}'\n"
+msgstr "wyrzucony „{}”\n"
+
+#: trashman/backends/xdgtrash.py:147
+msgid "restored {} to {}\n"
+msgstr "przywrócony {} do {}\n"
+
+#: trashman/backends/xdgtrash.py:152
+msgid "no such file in trash"
+msgstr "nie ma takiego pliku w śmietniku"

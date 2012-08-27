@@ -1,25 +1,24 @@
-=========
+========
 Trashman
-=========
+========
 
 :Author: Kwpolska <kwpolska@kwpolska.tk>
 :Copyright: See Appendix A.
-:Date: 2012-08-25
-:Version: 0.2.4
+:Date: 2012-08-27
+:Version: 1.0.0
 :Manual section: 1
 :Manual group: Trashman manual
 
 SYNOPSIS
 ========
 
-*trashman* <operation> [options] [targets]
+*trashman* [-hVerlvwW] [FILE [FILE...]]
 
 DESCRIPTION
 ===========
 
-Trashman is a XDG trash manager, i.e. an application which manages
-trash folders used by most modern-day non-proprietary desktops.
-
+Trashman is a trash manager, i.e. an application which manages
+trash folders.  It provides several backends.
 
 OPERATIONS
 ==========
@@ -37,10 +36,22 @@ OPERATIONS
     Lists the trash contents using ls.
 
 **-w, --trash-location**
-    Prints the trash location.
+    Prints the trash root location.
+
+**-W, --files-location**
+    Prints the location of trashed files, which may be different from the root.
 
 OPTIONS
 =======
+
+**-b BACKEND, --backend BACKEND**
+    Selects the backend to use.  'auto' chooses the backend automatically
+    (fallback: XDG), 'config' tries the config file (which is 'auto' by
+    default) and 'list' displays a list of the possible backends.  Can be
+    configured in  **~/.config/kwpolska/trashman/trashman.cfg**.
+
+**-h, --help**
+    Prints a help message.
 
 **-v, --verbose**
     Turns on verbose mode.
@@ -55,7 +66,7 @@ trash .gnome
     Trashes the .gnome directory.
 
 trash -r .gnome
-    Restores the .gnome directory from trash
+    Restores the .gnome directory from trash.
 
 trash -e
     Empties the trash.

@@ -1,16 +1,12 @@
-TODO for Trashman:
-  * class magic.
+=================
+TODO for Trashman
+=================
+:Author: Kwpolska
+:Copyright: See Appendix A.
+:Date: 2012-08-27
+:Version: 1.0.0
 
-    requires: time.
-
-    I plan to create a class, Trash, which will be inherited by
-    XDGTrash, which will be in another file.  That way, it might be
-    possible to get it to work with multiple OSes.  Although that
-    isn't very likely, because I don’t own a Mac, and the Windows
-    implementation is a binary mess.  Also, major might go up, and
-    minor is guaranteed to.
-
-    ETA: quite soon.
+.. index:: TODO
 
   * de_DE
 
@@ -47,4 +43,4 @@ TODO for Trashman:
 
     UPDATE: ranger uses ncurses...
 
--- Kwpolska 2012-08-25T13:21:00Z
+-- Kwpolska 2012-08-25T17:40:00Z
