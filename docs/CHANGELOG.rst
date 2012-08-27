@@ -4,12 +4,13 @@ CHANGELOG for Trashman
 :Author: Kwpolska
 :Copyright: See Appendix A.
 :Date: 2012-08-27
-:Version: 1.0.0
+:Version: 1.0.1
 
 .. index:: CHANGELOG
 
 1.0.0
 =====
+:1.0.1: Bugfix release.
 :1.0.0: A complete modification of the approach, now using a concept of “backends”, allowing multiple trash systems to be used.
 
 0.2.0

@@ -4,7 +4,7 @@ TODO for Trashman
 :Author: Kwpolska
 :Copyright: See Appendix A.
 :Date: 2012-08-27
-:Version: 1.0.0
+:Version: 1.0.1
 
 .. index:: TODO
 
