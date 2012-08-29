@@ -114,11 +114,11 @@ fi
 rm -rf trashman.egg-info __pycache__ trashman/__pycache__ trashman/backends/__pycache__ dist build
 
 git add *
-if [[ $? != '1' ]]; then
+if [[ $? != '0' ]]; then
     echo 'Open another terminal and fix the errors.'
     read dn
     git add *
-    if [[ $? != '1' ]]; then
+    if [[ $? != '0' ]]; then
         echo 'But please test your changes using that other terminal.'
         read dn2
         git add *
@@ -131,5 +131,5 @@ else
     git commit -asm "v$version: $commitmsg"
 fi
 git tag -a "v$version" -m "Version $version"
-git push --tags
 git push
+git push --tags
