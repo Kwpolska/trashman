@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- encoding: utf-8 -*-
-# Trashman v1.0.1
+# Trashman v1.0.2
 # A Python trash manager.
 # Copyright (C) 2011-2012, Kwpolska.
 # See /LICENSE for licensing information.
@@ -38,16 +38,28 @@ class TMDS(object):
         if confhome is None:
             confhome = os.path.expanduser('~/.config/')
 
-    confdir = os.path.join(confhome, 'kwpolska/trashman')
+    kwdir = os.path.join(confhome, 'kwpolska')
+    confdir = os.path.join(kwdir, 'trashman')
+
+    if not os.path.exists(confhome):
+        os.mkdir(confhome)
+
+    if not os.path.exists(kwdir):
+        os.mkdir(kwdir)
+
+    if not os.path.exists(confdir):
+        os.mkdir(confdir)
+
+    if not os.path.exists(confdir):
+        error(_('Cannot create the configuration directory.'))
+        exit(1)
+
     config = configparser.SafeConfigParser()
     config.read(os.path.join(confdir, 'trashman.cfg'))
     if not config.has_section('default_backend'):
         config.add_section('default_backend')
         config.set('default_backend', 'name', 'auto')
-        try:
-            config.write(open(os.path.join(confdir, 'trashman.cfg'), 'w'))
-        except IOError:
-            pass
+        config.write(open(os.path.join(confdir, 'trashman.cfg'), 'w'))
 
     if not os.path.exists(confdir):
         try:

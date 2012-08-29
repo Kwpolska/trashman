@@ -3,8 +3,8 @@ TODO for Trashman
 =================
 :Author: Kwpolska
 :Copyright: See Appendix A.
-:Date: 2012-08-27
-:Version: 1.0.1
+:Date: 2012-08-29
+:Version: 1.0.2
 
 .. index:: TODO
 

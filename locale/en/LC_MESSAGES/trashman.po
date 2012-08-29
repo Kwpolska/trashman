@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0.1\n"
+"Project-Id-Version: 1.0.2\n"
 "Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
-"POT-Creation-Date: 2012-08-27 19:03+0200\n"
+"POT-Creation-Date: 2012-08-29 10:52+0200\n"
 "PO-Revision-Date: 2012-08-13 20:48+0200\n"
 "Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
@@ -71,7 +71,11 @@ msgstr "FILE"
 msgid "files to trash"
 msgstr "files to trash"
 
-#. internal: [log/human, module, class, 'description as in docs']
+#: trashman/tmds.py:54
+msgid "Cannot create the configuration directory."
+msgstr "Cannot create the configuration directory."
+
+#. internal: [log/human, module, class, 'description as in docs', humans?]
 #: trashman/backends/__init__.py:26
 msgid "[choose automatically]"
 msgstr "[choose automatically]"
@@ -117,18 +121,18 @@ msgstr "*** using the {} backend"
 msgid "Backend didn’t implement this functionality"
 msgstr "Backend didn’t implement this functionality"
 
-#: trashman/backends/xdgtrash.py:77
+#: trashman/backends/xdgtrash.py:85
 msgid "emptied the trash\n"
 msgstr "emptied the trash\n"
 
-#: trashman/backends/xdgtrash.py:132
+#: trashman/backends/xdgtrash.py:150
 msgid "trashed '{}'\n"
 msgstr "trashed ‘{}’\n"
 
-#: trashman/backends/xdgtrash.py:147
+#: trashman/backends/xdgtrash.py:165
 msgid "restored {} to {}\n"
 msgstr "restored {} to {}\n"
 
-#: trashman/backends/xdgtrash.py:152
+#: trashman/backends/xdgtrash.py:170
 msgid "no such file in trash"
 msgstr "no such file to trash"
