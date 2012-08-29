@@ -10,6 +10,7 @@ CHANGELOG for Trashman
 
 1.0.0
 =====
+:1.0.2: Fixes #2, creating config dirs properly.  (the app crashed if there was no ~/.config/kwpolska/ dir.  This bug wasn’t found due to having PKGBUILDer installed, which was creating that directory.)
 :1.0.1: Bugfix release.
 :1.0.0: A complete modification of the approach, now using a concept of “backends”, allowing multiple trash systems to be used.
 
