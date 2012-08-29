@@ -84,9 +84,12 @@ is in in /tmp/TRASH')
         if verbose:
             sys.stderr.write(_('emptied the trash\n'))
 
-    def list(self):
+    def list(self, human=True):
         """List the trash contents."""
-        self.log('listing contents (on stdout)')
+        if human:
+            self.log('listing contents (on stdout; human=True)')
+        else:
+            self.log('listing contents (return; human=False)')
         dirs = []
         files = []
         for f in os.listdir(self.filedir):
@@ -98,11 +101,18 @@ is in in /tmp/TRASH')
         dirs.sort()
         files.sort()
 
+        allfiles = []
+
         for i in dirs:
-            print(i + '/')
+            allfiles.append(i + '/')
 
         for i in files:
-            print(i)
+            allfiles.append(i)
+
+        if human:
+            print('\n'.join(allfiles))
+        else:
+            return allfiles
 
     def trash(self, filepath, verbose):
         """Move specified file to trash."""

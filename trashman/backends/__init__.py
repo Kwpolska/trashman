@@ -22,14 +22,14 @@ import importlib
 def select(backend):
     """Select the backend.  'auto' for auto-selection and 'info' for list."""
     backend = backend.strip().lower()
-    # internal: [log/human, module, class, 'description as in docs']
-    BACKENDS = {'auto': ['', '', '', _('[choose automatically]')],
-                'config': ['', '', '', _('[consult trashman.cfg]')],
-                'list': ['', '', '', _('[list backends]')],
+    # internal: [log/human, module, class, 'description as in docs', humans?]
+    BACKENDS = {'auto': ['', '', '', _('[choose automatically]'), True],
+                'config': ['', '', '', _('[consult trashman.cfg]'), True],
+                'list': ['', '', '', _('[list backends]'), False],
                 'dummy': ['dummy', 'dummytrash', 'DummyTrash', _('A dummy \
-backend, printing all the requests it gets.')],
+backend, printing all the requests it gets.'), False],
                 'xdg': ['XDG', 'xdgtrash', 'XDGTrash', _('An XDG trash \
-implementation.')]}
+implementation.'), True]}
     if backend == 'config':
         backend = DS.config.get('default_backend', 'name')
         DS.log.info(_('*** backend from config: {}').format(backend))

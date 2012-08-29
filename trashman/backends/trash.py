@@ -42,7 +42,7 @@ class Trash(object):
         raise NotImplementedError(_('Backend didn’t \
 implement this functionality'))
 
-    def list(self):
+    def list(self, human=True):
         """List the trash contents."""
         raise NotImplementedError(_('Backend didn’t \
 implement this functionality'))

@@ -48,9 +48,12 @@ class DummyTrash(object):
         self.log('emptying (verbose={})'.format(verbose))
         self.regenerate()
 
-    def list(self):
+    def list(self, human=True):
         """List the trash contents."""
-        self.log('listing contents (on stdout)')
+        if human:
+            self.log('listing contents (on stdout; human=True)')
+        else:
+            self.log('listing contents (return; human=False)')
 
     def trash(self, filepath, verbose):
         """Move specified file to trash."""
