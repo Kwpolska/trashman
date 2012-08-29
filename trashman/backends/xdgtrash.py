@@ -110,7 +110,8 @@ is in in /tmp/TRASH')
             allfiles.append(i)
 
         if human:
-            print('\n'.join(allfiles))
+            if allfiles != []:
+                print('\n'.join(allfiles))
         else:
             return allfiles
 
