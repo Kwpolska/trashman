@@ -2,6 +2,8 @@ include LICENSE
 include README.rst
 include README
 include AUTHORS
+include PKGBUILD
+include PKGBUILD-git
 recursive-include docs *
 recursive-include bin *
 recursive-include locale *
