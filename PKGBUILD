@@ -2,9 +2,9 @@
 pkgname=trashman
 pkgver=1.0.2
 pkgrel=1
-pkgdesc='A Python trash manager. (built under py3k)'
+pkgdesc='A Python trash manager.  Python 3 build.'
 arch=('any')
-url='https://github.com/Kwpolska/pkgbuilder'
+url='https://github.com/Kwpolska/trashman'
 license=('BSD')
 depends=('python')
 options=(!emptydirs)
