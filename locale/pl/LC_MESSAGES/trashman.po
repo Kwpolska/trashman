@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0.2\n"
+"Project-Id-Version: 1.0.3\n"
 "Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
-"POT-Creation-Date: 2012-08-29 10:52+0200\n"
+"POT-Creation-Date: 2012-09-08 12:05+0200\n"
 "PO-Revision-Date: 2012-08-13 20:48+0200\n"
 "Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
@@ -29,41 +29,46 @@ msgstr "opcje"
 msgid "operations"
 msgstr "operacje"
 
-#: trashman/main.py:36
+#: trashman/main.py:33
+#, fuzzy
+msgid "show                         version number and quit"
+msgstr "pokaż wersję i wyjdź"
+
+#: trashman/main.py:37
 msgid "explain what is being done"
 msgstr "wyjaśnianie co się dzieje"
 
-#: trashman/main.py:38
+#: trashman/main.py:39
 msgid "select the backend (default:                         config->auto->xdg)"
 msgstr "wybierz backend (domyślnie: config->auto->xdg)"
 
-#: trashman/main.py:42
-msgid "empty the trash and exit"
+#: trashman/main.py:43
+msgid "empty the trash and quit"
 msgstr "opróźnij śmietnik i wyjdź"
 
-#: trashman/main.py:44
+#: trashman/main.py:45
 msgid ""
 "list the files in trash and                                               "
-"exit"
+"quit"
 msgstr "wylistuj pliki w śmietniku i wyjdź"
 
-#: trashman/main.py:47
+#: trashman/main.py:48
 msgid "restore FILE(s) from trash"
 msgstr "przywróć PLIK(i) ze śmietnika"
 
-#: trashman/main.py:49
-msgid "print the                         trash location and exit"
+#: trashman/main.py:50
+msgid "print the                         trash location and quit"
 msgstr "wypisz lokalizację śmietnika i wyjdź"
 
-#: trashman/main.py:52
-msgid "print the                         trashed files location and exit"
+#: trashman/main.py:53
+msgid "print the                         trashed files location and quit"
 msgstr "wypisz lokalizację plików w śmietniku i wyjdź"
 
-#: trashman/main.py:54
+#: trashman/main.py:55
 msgid "FILE"
 msgstr "PLIK"
 
-#: trashman/main.py:55
+#: trashman/main.py:56
 msgid "files to trash"
 msgstr "pliki do wyrzucenia"
 
@@ -121,14 +126,31 @@ msgstr "Backend nie zaimplementował tej funkcjonalności"
 msgid "emptied the trash\n"
 msgstr "opróżniono śmietnik\n"
 
-#: trashman/backends/xdgtrash.py:150
+#: trashman/backends/xdgtrash.py:151
 msgid "trashed '{}'\n"
 msgstr "wyrzucony „{}”\n"
 
-#: trashman/backends/xdgtrash.py:165
+#: trashman/backends/xdgtrash.py:166
 msgid "restored {} to {}\n"
 msgstr "przywrócony {} do {}\n"
 
-#: trashman/backends/xdgtrash.py:170
+#: trashman/backends/xdgtrash.py:171
 msgid "no such file in trash"
 msgstr "nie ma takiego pliku w śmietniku"
+
+#. A module only for gettext locale provision.
+#: localeprovider.py:2
+msgid "usage"
+msgstr "sposób użycia"
+
+#: localeprovider.py:2
+msgid "positional arguments"
+msgstr "argumenty pozycyjne:"
+
+#: localeprovider.py:2
+msgid "optional arguments"
+msgstr "argumenty opcjonalne:"
+
+#: localeprovider.py:2
+msgid "show this help message and exit"
+msgstr "pokaż ten opis i wyjdź"

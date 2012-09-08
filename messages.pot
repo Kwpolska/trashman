@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0.2\n"
+"Project-Id-Version: 1.0.3\n"
 "Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
-"POT-Creation-Date: 2012-08-29 10:52+0200\n"
-"PO-Revision-Date: 2012-08-29 10:52+0200\n"
+"POT-Creation-Date: 2012-09-08 12:05+0200\n"
+"PO-Revision-Date: 2012-09-08 12:05+0200\n"
 "Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language: en\n"
@@ -29,41 +29,45 @@ msgstr ""
 msgid "operations"
 msgstr ""
 
-#: trashman/main.py:36
+#: trashman/main.py:33
+msgid "show                         version number and quit"
+msgstr ""
+
+#: trashman/main.py:37
 msgid "explain what is being done"
 msgstr ""
 
-#: trashman/main.py:38
+#: trashman/main.py:39
 msgid "select the backend (default:                         config->auto->xdg)"
 msgstr ""
 
-#: trashman/main.py:42
-msgid "empty the trash and exit"
+#: trashman/main.py:43
+msgid "empty the trash and quit"
 msgstr ""
 
-#: trashman/main.py:44
+#: trashman/main.py:45
 msgid ""
 "list the files in trash and                                               "
-"exit"
+"quit"
 msgstr ""
 
-#: trashman/main.py:47
+#: trashman/main.py:48
 msgid "restore FILE(s) from trash"
 msgstr ""
 
-#: trashman/main.py:49
-msgid "print the                         trash location and exit"
+#: trashman/main.py:50
+msgid "print the                         trash location and quit"
 msgstr ""
 
-#: trashman/main.py:52
-msgid "print the                         trashed files location and exit"
-msgstr ""
-
-#: trashman/main.py:54
-msgid "FILE"
+#: trashman/main.py:53
+msgid "print the                         trashed files location and quit"
 msgstr ""
 
 #: trashman/main.py:55
+msgid "FILE"
+msgstr ""
+
+#: trashman/main.py:56
 msgid "files to trash"
 msgstr ""
 
@@ -121,14 +125,31 @@ msgstr ""
 msgid "emptied the trash\n"
 msgstr ""
 
-#: trashman/backends/xdgtrash.py:150
+#: trashman/backends/xdgtrash.py:151
 msgid "trashed '{}'\n"
 msgstr ""
 
-#: trashman/backends/xdgtrash.py:165
+#: trashman/backends/xdgtrash.py:166
 msgid "restored {} to {}\n"
 msgstr ""
 
-#: trashman/backends/xdgtrash.py:170
+#: trashman/backends/xdgtrash.py:171
 msgid "no such file in trash"
+msgstr ""
+
+#. A module only for gettext locale provision.
+#: localeprovider.py:2
+msgid "usage"
+msgstr ""
+
+#: localeprovider.py:2
+msgid "positional arguments"
+msgstr ""
+
+#: localeprovider.py:2
+msgid "optional arguments"
+msgstr ""
+
+#: localeprovider.py:2
+msgid "show this help message and exit"
 msgstr ""

@@ -33,7 +33,7 @@ rm docs/trashman.8.gz | true
 rst2man docs/trashman.rst > docs/trashman.8
 gzip docs/trashman.8
 
-xgettext -c ./trashman/*.py ./trashman/backends/*.py -o ./messages.pot
+xgettext -c ./trashman/*.py ./trashman/backends/*.py ./localeprovider.py -o ./messages.pot
 
 sed '1,+17d' ./messages.pot > ./messages.pot.tmp
 

@@ -1,6 +1,6 @@
 # Maintainer: Kwpolska <kwpolska@kwpolska.tk>
 pkgname=trashman
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 pkgdesc='A Python trash manager.  Python 3 build.'
 arch=('any')
@@ -9,7 +9,7 @@ license=('BSD')
 depends=('python')
 options=(!emptydirs)
 source=("http://pypi.python.org/packages/source/t/${pkgname}/${pkgname}-${pkgver}.tar.gz")
-md5sums=('f5133126a89bbeebb8788d2151ae81e4')
+md5sums=('e50ab675f18498dcfe8a7908230c65b9')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
