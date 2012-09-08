@@ -42,9 +42,10 @@ Additional documents, indices and tables
    :numbered:
 
    trashman
+   README for Trashman <README>
    functions
    backends/backends
-   README for Trashman <README>
+   localization
    LICENSE
    TODO
    CHANGELOG

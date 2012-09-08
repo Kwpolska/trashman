@@ -4,7 +4,7 @@ Trashman.  A Python trash manager.
 
 :Info: This is the README file for Trashman.
 :Author: Kwpolska <kwpolska@kwpolska.tk>
-:Date: 2012-09-08
+:Date: 2012-09-09
 :Version: 1.0.3
 
 PURPOSE

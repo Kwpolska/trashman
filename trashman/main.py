@@ -23,35 +23,43 @@ import argparse
 ### main()         The main routine        ###
 def main():
     """The main routine."""
-    parser = argparse.ArgumentParser(description=_('Trashman -- a Python \
-                                     trash manager.'))
+    verstring = 'Trashman v'+__version__
+    # TRANSLATORS: translate the whole sentence.
+    # Alternatively, use translation instead of locale.
+    locale = _('LANG locale by AUTHOR <MAIL@IF.YOU.WANT>')
+    if locale != 'LANG locale by AUTHOR <MAIL@IF.YOU.WANT>':
+                    verstring = '\n'.join([verstring, locale])
+    DS.log.info('Initialized, parsing arguments.')
+    parser = argparse.ArgumentParser(description=_('Trashman -- a Python'
+                    ' trash manager.'),
+            formatter_class=argparse.RawTextHelpFormatter)
+
+    parser.add_argument('-V', '--version', action='version',
+                version=verstring,
+                help=_('show version number and quit'))
 
     argopt = parser.add_argument_group(_('options'))
     argopr = parser.add_argument_group(_('operations'))
 
-    parser.add_argument('-V', '--version', action='version',
-                        version='Trashman v' + __version__, help=_('show \
-                        version number and quit'))
-
     argopt.add_argument('-v', '--verbose', action='store_true', default=False,
                         dest='verbose', help=_('explain what is being done'))
     argopt.add_argument('-b', '--backend', action='store', default='config',
-                        dest='backend', help=_('select the backend (default: \
-                        config->auto->xdg)'))
+                        dest='backend', help=_('select the backend (default: '
+                                               'config->auto->xdg)'))
 
     argopr.add_argument('-e', '--empty', action='store_true', default=False,
                         dest='empty', help=_('empty the trash and quit'))
     argopr.add_argument('-l', '--list', action='store_true', default=False,
-                        dest='flist', help=_('list the files in trash and \
-                                              quit'))
+                        dest='flist', help=_('list the files in trash and '
+                                             'quit'))
     argopr.add_argument('-r', '--restore', action='store_true', default=False,
                         dest='restore', help=_('restore FILE(s) from trash'))
     argopr.add_argument('-w', '--trash-location', action='store_true',
-                        default=False, dest='showtloc', help=_('print the \
-                        trash location and quit'))
+                        default=False, dest='showtloc', help=_('print the '
+                        'trash location and quit'))
     argopr.add_argument('-W', '--files-location', action='store_true',
-                        default=False, dest='showfloc', help=_('print the \
-                        trashed files location and quit'))
+                        default=False, dest='showfloc', help=_('print the '
+                        'trashed files location and quit'))
     parser.add_argument('files', metavar=_('FILE'), action='store', nargs='*',
                         help=_('files to trash'))
     args = parser.parse_args()

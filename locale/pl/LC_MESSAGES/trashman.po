@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.3\n"
 "Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
-"POT-Creation-Date: 2012-09-08 12:05+0200\n"
-"PO-Revision-Date: 2012-08-13 20:48+0200\n"
+"POT-Creation-Date: 2012-09-09 13:25+0200\n"
+"PO-Revision-Date: 2012-09-09 13:24+0100\n"
 "Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language: pl\n"
@@ -16,59 +16,61 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: trashman/main.py:26
-msgid ""
-"Trashman -- a Python                                      trash manager."
+#. TRANSLATORS: translate the whole sentence.
+#. Alternatively, use translation instead of locale.
+#: trashman/main.py:29
+msgid "LANG locale by AUTHOR <MAIL@IF.YOU.WANT>"
+msgstr "Polskie tłumaczenie autorstwa Kwpolska<kwpolska@kwpolska.tk>"
+
+#: trashman/main.py:33
+msgid "Trashman -- a Python trash manager."
 msgstr "Trashman — menedżer śmietnika w Pythonie."
 
-#: trashman/main.py:29
+#: trashman/main.py:39
+msgid "show version number and quit"
+msgstr "pokaż wersję i wyjdź"
+
+#: trashman/main.py:41
 msgid "options"
 msgstr "opcje"
 
-#: trashman/main.py:30
+#: trashman/main.py:42
 msgid "operations"
 msgstr "operacje"
 
-#: trashman/main.py:33
-#, fuzzy
-msgid "show                         version number and quit"
-msgstr "pokaż wersję i wyjdź"
-
-#: trashman/main.py:37
+#: trashman/main.py:45
 msgid "explain what is being done"
 msgstr "wyjaśnianie co się dzieje"
 
-#: trashman/main.py:39
-msgid "select the backend (default:                         config->auto->xdg)"
+#: trashman/main.py:47
+msgid "select the backend (default: config->auto->xdg)"
 msgstr "wybierz backend (domyślnie: config->auto->xdg)"
 
-#: trashman/main.py:43
+#: trashman/main.py:51
 msgid "empty the trash and quit"
 msgstr "opróźnij śmietnik i wyjdź"
 
-#: trashman/main.py:45
-msgid ""
-"list the files in trash and                                               "
-"quit"
+#: trashman/main.py:53
+msgid "list the files in trash and quit"
 msgstr "wylistuj pliki w śmietniku i wyjdź"
 
-#: trashman/main.py:48
+#: trashman/main.py:56
 msgid "restore FILE(s) from trash"
 msgstr "przywróć PLIK(i) ze śmietnika"
 
-#: trashman/main.py:50
-msgid "print the                         trash location and quit"
+#: trashman/main.py:58
+msgid "print the trash location and quit"
 msgstr "wypisz lokalizację śmietnika i wyjdź"
 
-#: trashman/main.py:53
-msgid "print the                         trashed files location and quit"
+#: trashman/main.py:61
+msgid "print the trashed files location and quit"
 msgstr "wypisz lokalizację plików w śmietniku i wyjdź"
 
-#: trashman/main.py:55
+#: trashman/main.py:63
 msgid "FILE"
 msgstr "PLIK"
 
-#: trashman/main.py:56
+#: trashman/main.py:64
 msgid "files to trash"
 msgstr "pliki do wyrzucenia"
 
@@ -154,3 +156,11 @@ msgstr "argumenty opcjonalne:"
 #: localeprovider.py:2
 msgid "show this help message and exit"
 msgstr "pokaż ten opis i wyjdź"
+
+#~ msgid ""
+#~ "list the files in trash and                                               "
+#~ "quit"
+#~ msgstr "wylistuj pliki w śmietniku i wyjdź"
+
+#~ msgid "print the                         trash location and quit"
+#~ msgstr "wypisz lokalizację śmietnika i wyjdź"

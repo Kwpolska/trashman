@@ -70,9 +70,11 @@ for i in ./locale/*; do
     sed 's/\"Project-Id-Version: .*/\"Project-Id-Version: '$version'\\n\"/' $popath -i
     msgmerge $popath messages.pot -o $popath
     fuzzy=$(cat $popath | grep '#, fuzzy')
-    echo "Please press a key to validate language $language."
+    echo "Hit Enter to validate language $language or c to cancel and ignore."
     read validatesure
-    $EDITOR $popath
+    if [[ $validatesure != 'c' ]]; then
+        $EDITOR $popath
+    fi
     msgfmt -o $podir/trashman.mo $popath
 done
 
