@@ -2,7 +2,7 @@
 Global Functions and Modules List
 =================================
 :Author: Kwpolska
-:Copyright: See Appendix A.
+:Copyright: See Appendix B.
 :Date: 2012-09-09
 :Version: 1.0.3
 

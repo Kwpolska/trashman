@@ -2,7 +2,7 @@
 Backends
 ========
 :Author: Kwpolska
-:Copyright: See Appendix A.
+:Copyright: See Appendix B.
 :Date: 2012-08-25
 :Version: 0.2.4
 
