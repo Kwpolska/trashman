@@ -47,8 +47,9 @@ Additional documents, indices and tables
    backends/backends
    localization
    LICENSE
-   TODO
    CHANGELOG
+   CONTRIBUTING
+   TODO
 
 * :ref:`genindex`
 * :ref:`modindex`
