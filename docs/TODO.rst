@@ -1,6 +1,6 @@
-=================
-TODO for Trashman
-=================
+=============================
+Appendix E. TODO for Trashman
+=============================
 :Author: Kwpolska
 :Copyright: See Appendix B.
 :Date: 2012-09-09
