@@ -8,6 +8,8 @@ url='https://github.com/Kwpolska/trashman'
 license=('BSD')
 depends=('python')
 makedepends=('git')
+provides=('trashman')
+conflicts=('trashman')
 options=(!emptydirs)
 
 _gitroot=git://github.com/Kwpolska/trashman.git
