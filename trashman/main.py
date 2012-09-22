@@ -15,7 +15,7 @@
     :License: BSD (see /LICENSE).
 """
 
-from . import DS, _, __version__
+from . import DS, _, TMError, __version__, __pyver__
 from .backends import select
 import argparse
 
@@ -86,7 +86,20 @@ def main():
 
     if args.restore:
         for fileres in args.files:
-            DS.trash.restore(fileres, args.verbose)
+            try:
+                DS.trash.restore(fileres, args.verbose)
+            except TMError as e:
+                print(_('ERROR:') + ' ' + e.msg)
+                if e.src == 'restore' and e.info == 'nodir':
+                    if __pyver__[0] == 3:
+                        i = input('Restore to current working directory? '
+                                  '[Y/n] ')
+                    else:
+
+                        i = raw_input('Restore to current working directory? '
+                                      '[Y/n] ')
+                    if not i.lower().startswith('n'):
+                        DS.trash.restore(fileres, args.verbose, tocwd=True)
         quit_notrash = True
 
     if args.empty:

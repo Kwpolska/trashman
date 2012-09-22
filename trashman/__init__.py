@@ -78,9 +78,11 @@ def size_dir(sdir):
 class TMError(Exception):
     """Exceptions raised by the Trashman."""
 
-    def __init__(self, msg):
+    def __init__(self, src, info, msg):
         """TMError init."""
-        DS.log.error('(auto TMError       ) ' + msg)
+        DS.log.error('(auto TMError       ) [{}/{}]'.format(src, info) + msg)
+        self.src = src
+        self.info = info
         self.msg = msg
 
     def __str__(self):

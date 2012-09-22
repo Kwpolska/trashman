@@ -1,6 +1,6 @@
 #!/bin/zsh
-project="$project"
-projectc="$project"
+project="trashman"
+projectc="Trashman"
 aurcat="system"
 
 version=$1
@@ -73,7 +73,18 @@ for i in ./locale/*; do
     sed 's/\"Project-Id-Version: .*/\"Project-Id-Version: '$version'\\n\"/' $popath -i
     msgmerge $popath messages.pot -o $popath
     fuzzy=$(cat $popath | grep '#, fuzzy')
-    echo "Hit Enter to validate language $language or c to cancel and ignore."
+    empty=$(cat $popath | pcregrep -M 'msgstr ""\n$')
+    countf=$(echo $fuzzy | wc -l)
+    counte=$(echo $empty | wc -l)
+    if [ countf != 0 ]; then
+        echo "WARNING: $countf fuzzy strings in language $language."
+    fi
+
+    if [ counte != 0 ]; then
+        echo "WARNING: $counte empty strings in language $language."
+    fi
+
+    echo "$language: [enter] to edit, [c] to continue"
     read validatesure
     if [[ $validatesure != 'c' ]]; then
         $EDITOR $popath
@@ -81,7 +92,7 @@ for i in ./locale/*; do
     msgfmt -o $podir/$project.mo $popath
 done
 
-python -c 'import $project'
+python -c "import $project"
 if [[ $? = 1 ]]; then
     echo "Import failed.  Fix your code or don't come back."
     exit 1

@@ -16,24 +16,6 @@ Appendix E. TODO for Trashman
 
   requires: magic, see kwsblog/modify/color for a cheap solution.
 
-* restore with better handling of errors AND handling of getting a
-      file from a subdirectory
-
-  requires: time.
-
-  NOTE: KDE (the implementation I’m basing some of mine on) doesn’t
-  like doing the second thing.  Error message pasted verbatim:
-
-        The directory /home/kwpolska/Desktop/TRASHTEST does not exist
-        anymore, so it is not possible to restore this item to its
-        original location.  You can either recreate that directory
-        and use the restore operation again, or drag the item
-        anywhere else to restore it.
-
-  (created a directory called ~/Desktop/TRASHTEST, added a
-  file, trashed the directory, tried to restore the file
-  inside)
-
 * [proposition] file management UI
 
   requires: magic, qt/ncurses (ranger is in python, this might be
@@ -63,7 +45,7 @@ Appendix E. TODO for Trashman
     | [ Move to Trash ]     [ Empty ]            [ Restore ]     [ Delete ] |
     +-----------------------------------------------------------------------+
 
-(that fancy thing in the top-left is a trash icon.  And the arror next to it
+(that fancy thing in the top-left is a trash icon.  And the arrow next to it
 opens a menu, just like the [...] next to the backend combo box.)
 
--- Kwpolska 2012-08-28T18:17:00Z
+-- Kwpolska 2012-09-22T12:30:00Z

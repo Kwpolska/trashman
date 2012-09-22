@@ -150,22 +150,32 @@ DeletionDate={}
         if verbose:
             sys.stderr.write(_('trashed \'{}\'\n').format(filename))
 
-    def restore(self, filename, verbose):
+    def restore(self, filename, verbose, tocwd=False):
         """Restore a file from trash."""
-        self.log('restoring file {} (verbose={})'.format(filename, verbose))
+        self.log('restoring file {} (verbose={}, tocwd={})'.format(filename,
+                 verbose, tocwd))
         info = configparser.ConfigParser()
-        if os.path.isfile(os.path.join(self.filedir, filename)):
+        if os.path.exists(os.path.join(self.filedir, filename)):
             info.read(os.path.join(self.infodir, filename + '.trashinfo'))
-            os.rename(os.path.join(self.filedir, filename),
-                      info.get('Trash Info', 'Path'))
+            restname = os.path.basename(info.get('Trash Info', 'Path'))
+
+            if tocwd:
+                restdir = os.path.abspath('.')
+            else:
+                restdir = os.path.dirname(info.get('Trash Info', 'Path'))
+
+            restfile = os.path.join(restdir, restname)
+            if not os.path.exists(restdir):
+                raise TMError('restore', 'nodir', _('no such directory: {}'
+                              ' -- cannot restore').format(restdir))
+            os.rename(os.path.join(self.filedir, filename), restfile)
             os.remove(os.path.join(self.infodir, filename + '.trashinfo'))
             self.regenerate()
-            self.log('restored {} to {}'.format(filename,
-                     info.get('Trash Info', 'Path')))
+            self.log('restored {} to {}'.format(filename, restfile))
             if verbose:
                 sys.stderr.write(_('restored {} to {}\n').format(filename,
-                                 info.get('Trash Info', 'Path')))
+                                 restfile))
 
         else:
             self.log('couldn\'t find {} in trash'.format(filename))
-            raise TMError(_('no such file in trash'))
+            raise TMError('restore', 'nofile', _('no such file in trash'))

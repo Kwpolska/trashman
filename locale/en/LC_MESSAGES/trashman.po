@@ -138,7 +138,7 @@ msgstr "restored {} to {}\n"
 
 #: trashman/backends/xdgtrash.py:171
 msgid "no such file in trash"
-msgstr "no such file to trash"
+msgstr "no such file in trash"
 
 #. A module only for gettext locale provision.
 #: localeprovider.py:2
@@ -156,13 +156,3 @@ msgstr "optional arguments"
 #: localeprovider.py:2
 msgid "show this help message and exit"
 msgstr "show this help message and quit"
-
-#~ msgid ""
-#~ "list the files in trash and                                               "
-#~ "quit"
-#~ msgstr ""
-#~ "list the files in trash and                                               "
-#~ "quit"
-
-#~ msgid "print the                         trash location and quit"
-#~ msgstr "print the                         trash location and quit"
