@@ -110,5 +110,8 @@ def main():
         exit()
     else:
         # Did not quit?  We can trash.
-        for filedel in args.files:
-            DS.trash.trash(filedel, args.verbose)
+        for f in args.files:
+            try:
+                DS.trash.trash(f, args.verbose)
+            except OSError as e:
+                print(_('ERROR:') + ' ' + e.strerror + ' ({})'.format(f))
