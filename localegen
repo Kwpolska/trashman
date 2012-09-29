@@ -1,0 +1,15 @@
+#!/bin/bash
+project="trashman"
+language=$1
+
+xgettext -c ./$project/*.py ./$project/backends/*.py ./localeprovider.py -o ./messages.pot
+
+podir="./locale/$language/LC_MESSAGES"
+popath="./locale/$language/LC_MESSAGES/$project.po"
+msgmerge $popath messages.pot -o $popath
+fuzzy=$(cat $popath | grep -c '#, fuzzy')
+empty=$(cat $popath | pcregrep -cM 'msgstr ""\n$')
+echo "$fuzzy fuzzy strings"
+echo "$empty empty strings"
+
+msgfmt -o $podir/$project.mo $popath
