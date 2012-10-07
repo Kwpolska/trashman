@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0.3\n"
+"Project-Id-Version: 1.0.4\n"
 "Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
-"POT-Creation-Date: 2012-09-09 13:25+0200\n"
+"POT-Creation-Date: 2012-10-07 15:04+0200\n"
 "PO-Revision-Date: 2012-09-09 13:24+0100\n"
 "Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. Alternatively, use translation instead of locale.
 #: trashman/main.py:29
 msgid "LANG locale by AUTHOR <MAIL@IF.YOU.WANT>"
-msgstr "Polskie tłumaczenie autorstwa Kwpolska<kwpolska@kwpolska.tk>"
+msgstr "Polskie tłumaczenie autorstwa Kwpolska <kwpolska@kwpolska.tk>"
 
 #: trashman/main.py:33
 msgid "Trashman -- a Python trash manager."
@@ -73,6 +73,10 @@ msgstr "PLIK"
 #: trashman/main.py:64
 msgid "files to trash"
 msgstr "pliki do wyrzucenia"
+
+#: trashman/main.py:92 trashman/main.py:117
+msgid "ERROR:"
+msgstr "BŁĄD:"
 
 #: trashman/tmds.py:54
 msgid "Cannot create the configuration directory."
@@ -132,11 +136,15 @@ msgstr "opróżniono śmietnik\n"
 msgid "trashed '{}'\n"
 msgstr "wyrzucony „{}”\n"
 
-#: trashman/backends/xdgtrash.py:166
+#: trashman/backends/xdgtrash.py:169
+msgid "no such directory: {} -- cannot restore"
+msgstr ""
+
+#: trashman/backends/xdgtrash.py:176
 msgid "restored {} to {}\n"
 msgstr "przywrócony {} do {}\n"
 
-#: trashman/backends/xdgtrash.py:171
+#: trashman/backends/xdgtrash.py:181
 msgid "no such file in trash"
 msgstr "nie ma takiego pliku w śmietniku"
 

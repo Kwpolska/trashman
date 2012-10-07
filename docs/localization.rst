@@ -4,8 +4,8 @@ Appendix A. Localization Guide
 :Author: Kwpolska <kwpolska@kwpolska.tk>
 :Copyright: © 2011-2012, Kwpolska.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
-:Date: 2012-09-09
-:Version: 1.0.3
+:Date: 2012-10-07
+:Version: 1.0.4
 
 .. index:: locale
 

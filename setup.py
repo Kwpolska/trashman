@@ -6,7 +6,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(name='trashman',
-      version='1.0.3',
+      version='1.0.4',
       description='A Python trash manager.',
       author='Kwpolska',
       author_email='kwpolska@kwpolska.tk',

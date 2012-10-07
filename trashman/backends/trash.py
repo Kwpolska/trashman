@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman v1.0.3
+# Trashman v1.0.4
 # A Python trash manager.
 # Copyright (C) 2011-2012, Kwpolska.
 # See /LICENSE for licensing information.

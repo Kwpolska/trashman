@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0.3\n"
+"Project-Id-Version: 1.0.4\n"
 "Report-Msgid-Bugs-To: Kwpolska <kwpolska@kwpolska.tk>\n"
-"POT-Creation-Date: 2012-09-09 13:25+0200\n"
+"POT-Creation-Date: 2012-10-07 15:08+0200\n"
 "PO-Revision-Date: 2012-09-09 13:25+0100\n"
 "Last-Translator: Kwpolska <kwpolska@kwpolska.tk>\n"
 "Language-Team: Kwpolska <kwpolska@kwpolska.tk>\n"
@@ -74,6 +74,10 @@ msgstr "FILE"
 msgid "files to trash"
 msgstr "files to trash"
 
+#: trashman/main.py:92 trashman/main.py:117
+msgid "ERROR:"
+msgstr "ERROR:"
+
 #: trashman/tmds.py:54
 msgid "Cannot create the configuration directory."
 msgstr "Cannot create the configuration directory."
@@ -132,11 +136,15 @@ msgstr "emptied the trash\n"
 msgid "trashed '{}'\n"
 msgstr "trashed ‘{}’\n"
 
-#: trashman/backends/xdgtrash.py:166
+#: trashman/backends/xdgtrash.py:169
+msgid "no such directory: {} -- cannot restore"
+msgstr ""
+
+#: trashman/backends/xdgtrash.py:176
 msgid "restored {} to {}\n"
 msgstr "restored {} to {}\n"
 
-#: trashman/backends/xdgtrash.py:171
+#: trashman/backends/xdgtrash.py:181
 msgid "no such file in trash"
 msgstr "no such file in trash"
 

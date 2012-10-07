@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman v1.0.3
+# Trashman v1.0.4
 # A Python trash manager.
 # Copyright (C) 2011-2012, Kwpolska.
 # See /LICENSE for licensing information.
@@ -28,7 +28,7 @@ def main():
     # Alternatively, use translation instead of locale.
     locale = _('LANG locale by AUTHOR <MAIL@IF.YOU.WANT>')
     if locale != 'LANG locale by AUTHOR <MAIL@IF.YOU.WANT>':
-                    verstring = '\n'.join([verstring, locale])
+        verstring = ' | '.join([verstring, locale])
     DS.log.info('Initialized, parsing arguments.')
     parser = argparse.ArgumentParser(description=_('Trashman -- a Python'
                     ' trash manager.'),
