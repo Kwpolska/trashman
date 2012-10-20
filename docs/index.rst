@@ -45,10 +45,9 @@ Additional documents, indices and tables
    README for Trashman <README>
    functions
    backends/backends
-   localization
+   CONTRIBUTING
    LICENSE
    CHANGELOG
-   CONTRIBUTING
    TODO
 
 * :ref:`genindex`
