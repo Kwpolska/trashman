@@ -153,6 +153,6 @@ if [[ $cm = 't' ]]; then
 else
     git commit -asm "v$version: $commitmsg"
 fi
-git tag -a "v$version" -m "Version $version"
+git tag -sa "v$version" -m "Version $version"
 git push
 git push --tags
