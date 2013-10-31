@@ -18,7 +18,7 @@ PyPI or AUR.
 
 COPYRIGHT
 ---------
-Copyright (C) 2011-2012, Kwpolska.
+Copyright (C) 2011-2012, Chris “Kwpolska” Warrick.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
