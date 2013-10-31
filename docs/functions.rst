@@ -1,7 +1,7 @@
 =================================
 Global Functions and Modules List
 =================================
-:Author: Kwpolska <kwpolska@kwpolska.tk>
+:Author: Chris “Kwpolska” Warrick <kwpolska@kwpolska.tk>
 :Copyright: © 2011-2012, Kwpolska.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
 :Date: 2012-10-07

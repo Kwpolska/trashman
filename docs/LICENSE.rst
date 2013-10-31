@@ -2,7 +2,7 @@
 Appendix A. License for Trashman
 ================================
 :Info: This is the license for Trashman.
-:Author: Kwpolska <kwpolska@kwpolska.tk>
+:Author: Chris “Kwpolska” Warrick <kwpolska@kwpolska.tk>
 :Date: 2012-10-07
 :Version: 1.0.4
 
