@@ -1,9 +1,9 @@
-# Maintainer: Kwpolska <kwpolska@kwpolska.tk>
+# Maintainer: Chris Warrick <aur@chriswarrick.com>
 pkgname=trashman-git
 _pyname=trashman
 pkgver=20121007
 pkgrel=1
-pkgdesc='A Python trash manager.  Python 3 build, version from git.'
+pkgdesc='A Python trash manager.  (git version)'
 arch=('any')
 url='https://github.com/Kwpolska/trashman'
 license=('BSD')
