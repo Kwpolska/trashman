@@ -44,12 +44,6 @@ import trashman.backends.xdgtrash
 
 
 class TestTM(unittest.TestCase):
-    # trashman
-    def test_size_dir(self):
-        req = trashman.size_dir('./bin/')
-        if req != 4227:  # Hardcoded, but the size shouldn’t change.
-            raise Exception('test_size_dir: size != 4227')
-
     def test_tmds(self):
         tmds = trashman.tmds.TMDS()
         req = tmds.config.get('default_backend', 'name')
