@@ -3,14 +3,14 @@ XDGTrash
 =========
 :Name: XDGTrash
 :Module: xdgtrash
-:Author: Kwpolska <kwpolska@kwpolska.tk>
+:Author: Chris Warrick <chris@chriswarrick.com>
 :Specification: XDG/freedesktop <http://freedesktop.org/wiki/Specifications/trash-spec>
 :OS: Linux (KDE, GNOME, Xfce and others conforming to this spec)
 :Description: An XDG trash implementation.
-:Copyright: © 2011-2012, Kwpolska.
+:Copyright: © 2011–2015, Chris Warrick.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
-:Date: 2012-08-25
-:Version: 0.2.4
+:Date: 2015-02-28
+:Version: 1.5.0
 
 .. index:: XDGTrash
 

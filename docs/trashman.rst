@@ -2,11 +2,11 @@
 Trashman
 ========
 
-:Author: Chris “Kwpolska” Warrick <kwpolska@kwpolska.tk>
-:Copyright: © 2011-2012, Kwpolska.
+:Author: Chris Warrick <chris@chriswarrick.com>
+:Copyright: © 2011–2015, Chris Warrick.
 :License: BSD (see /LICENSE or Appendix B.)
-:Date: 2012-10-07
-:Version: 1.0.4
+:Date: 2015-03-07
+:Version: 1.5.0
 :Manual section: 1
 :Manual group: Trashman manual
 
@@ -63,19 +63,17 @@ OPTIONS
 EXAMPLES
 ========
 
-trash .gnome
-    Trashes the .gnome directory.
+trash foo
+    Trashes the ``foo`` directory.
 
-trash -r .gnome
-    Restores the .gnome directory from trash.
+trash foo
+    Restores the ``foo`` directory from trash.
 
 trash -e
     Empties the trash.
-
-(GNOME, especially in version 3, is a huge pile of crap.)
 
 BUGS
 ====
 Bugs should be reported at the GitHub page
 (<https://github.com/Kwpolska/trashman/issues>).  You can also
-send mail to <kwpolska@kwpolska.tk>.
+send mail to <chris@chriswarrick.com>.

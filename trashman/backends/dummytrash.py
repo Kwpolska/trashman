@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman v1.0.4
+# Trashman v1.5.0
 # A Python trash manager.
-# Copyright (C) 2011-2012, Kwpolska.
+# Copyright (C) 2011–2015, Chris Warrick.
 # See /LICENSE for licensing information.
 
 """
@@ -10,7 +10,7 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     A dummy backend, printing all the requests it gets.
 
-    :Copyright: © 2011-2012, Kwpolska.
+    :Copyright: © 2011–2015, Chris Warrick.
     :License: BSD (see /LICENSE).
 """
 import logging
