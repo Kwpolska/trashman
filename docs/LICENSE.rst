@@ -2,13 +2,13 @@
 Appendix A. License for Trashman
 ================================
 :Info: This is the license for Trashman.
-:Author: Chris “Kwpolska” Warrick <kwpolska@kwpolska.tk>
-:Date: 2012-10-07
-:Version: 1.0.4
+:Author: Chris Warrick <chris@chriswarrick.com>
+:Date: 2015-03-07
+:Version: 1.5.0
 
 .. index:: LICENSE
 
-Copyright (C) 2011-2012, Chris “Kwpolska” Warrick.
+Copyright © 2011–2015, Chris Warrick.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

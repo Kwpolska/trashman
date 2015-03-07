@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Trashman v1.0.4
+# Trashman v1.5.0
 # A Python trash manager.
-# Copyright (C) 2011-2012, Kwpolska.
+# Copyright (C) 2011–2015, Chris Warrick.
 # See /LICENSE for licensing information.
 
 """
@@ -11,7 +11,7 @@
 
     Trashman’s main routine.
 
-    :Copyright: © 2011-2012, Kwpolska.
+    :Copyright: © 2011–2015, Chris Warrick.
     :License: BSD (see /LICENSE).
 """
 
@@ -20,7 +20,6 @@ from .backends import select
 import argparse
 
 
-### main()         The main routine        ###
 def main():
     """The main routine."""
     verstring = 'Trashman v'+__version__
@@ -115,3 +114,6 @@ def main():
                 DS.trash.trash(f, args.verbose)
             except OSError as e:
                 print(_('ERROR:') + ' ' + e.strerror + ' ({})'.format(f))
+
+if __name__ == '__main__':
+    main()

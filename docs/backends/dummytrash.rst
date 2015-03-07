@@ -3,14 +3,14 @@ DummyTrash
 ==========
 :Name: DummyTrash
 :Module: dummytrash
-:Author: Kwpolska <kwpolska@kwpolska.tk>
+:Author: Chris Warrick <chris@chriswarrick.com>
 :Specification: n/a
 :OS: any
 :Description: A dummy backend, printing all the requests it gets.
-:Copyright: © 2011-2012, Kwpolska.
+:Copyright: © 2011–2015, Chris Warrick.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
-:Date: 2012-08-25
-:Version: 0.2.4
+:Date: 2015-02-28
+:Version: 1.5.0
 
 .. index:: DummyTrash
 
