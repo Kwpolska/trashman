@@ -1,7 +1,7 @@
 # Trashman pot file.
-# Copyright © 2011–2015, Chris Warrick.
+# Copyright © 2011-2016, Chris Warrick.
 # This file is distributed under the same license as the Trashman package.
-# Chris Warrick <chris@chriswarrick.com>, 2011–2015.
+# Chris Warrick <chris@chriswarrick.com>, 2011-2016.
 #
 msgid ""
 msgstr ""

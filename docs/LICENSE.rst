@@ -8,7 +8,7 @@ Appendix A. License for Trashman
 
 .. index:: LICENSE
 
-Copyright © 2011–2015, Chris Warrick.
+Copyright © 2011-2016, Chris Warrick.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
