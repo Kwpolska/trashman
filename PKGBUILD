@@ -7,9 +7,9 @@ pkgdesc='A Python trash manager.'
 arch=('any')
 url='https://github.com/Kwpolska/trashman'
 license=('BSD')
-depends=('python')
+depends=('python' 'python-setuptools')
 options=(!emptydirs)
-source=("http://pypi.python.org/packages/source/$(echo ${_pyname} | cut -c1)/${_pyname}/${_pyname}-${pkgver}.tar.gz")
+source=("https://files.pythonhosted.org/packages/source/${_pyname:0:1}/${_pyname}/${_pyname}-${pkgver}.tar.gz")
 md5sums=('761837310ac289fa9d596047b85466aa')
 
 package() {

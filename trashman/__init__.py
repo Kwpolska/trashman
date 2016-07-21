@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 # Trashman v1.5.0
 # A Python trash manager.
-# Copyright (C) 2011–2015, Chris Warrick.
+# Copyright (C) 2011-2016, Chris Warrick.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -39,7 +39,7 @@
 
     A Python trash manager.
 
-    :Copyright: © 2011–2015, Chris Warrick.
+    :Copyright: © 2011-2016, Chris Warrick.
     :License: BSD (see /LICENSE).
 """
 
