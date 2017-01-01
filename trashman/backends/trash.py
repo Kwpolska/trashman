@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 # Trashman v1.5.0
 # A Python trash manager.
-# Copyright (C) 2011-2016, Chris Warrick.
+# Copyright (C) 2011-2017, Chris Warrick.
 # See /LICENSE for licensing information.
 
 """
@@ -11,7 +11,7 @@
 
     Base Trash class.
 
-    :Copyright: © 2011-2016, Chris Warrick.
+    :Copyright: © 2011-2017, Chris Warrick.
     :License: BSD (see /LICENSE).
 """
 from .. import DS
