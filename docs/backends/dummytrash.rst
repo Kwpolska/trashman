@@ -7,7 +7,7 @@ DummyTrash
 :Specification: n/a
 :OS: any
 :Description: A dummy backend, printing all the requests it gets.
-:Copyright: © 2011-2017, Chris Warrick.
+:Copyright: © 2011-2018, Chris Warrick.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
 :Date: 2015-02-28
 :Version: 1.5.0

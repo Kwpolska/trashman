@@ -18,7 +18,7 @@ PyPI or AUR.
 
 COPYRIGHT
 ---------
-Copyright © 2011-2017, Chris Warrick.
+Copyright © 2011-2018, Chris Warrick.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
